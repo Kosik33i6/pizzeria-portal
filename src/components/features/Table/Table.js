@@ -8,13 +8,16 @@ const Table = (props) => {
   const {name, orders} = props;
   // console.log(orders);
 
+  const getActiveOrders = [...orders].filter(order => order.status !== 'done' && order.status !== 'cancelled');
+  console.log('getActiveOrders: ', getActiveOrders);
+
   return (
     <div className={styles.component}>
       <h3 className={styles.title}>{name}</h3>
       <Button variant='contained' size='small' color='secondary'>New Order</Button>
       <ul>
         <Row>
-          {orders.map(orderData => (
+          {getActiveOrders.map(orderData => (
             <OrderSummary
               key={orderData.id}
               {...orderData}

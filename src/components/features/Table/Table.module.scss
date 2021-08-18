@@ -1,7 +1,9 @@
 @import '../../../styles/settings.scss';
 
 .component {
-  background-color: $color-bg-light;
+  height: 350px;
+  margin: 20px auto;
+  background-color: $color-bg-medium;
 }
 
 .title {
