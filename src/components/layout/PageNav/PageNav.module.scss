@@ -2,7 +2,15 @@
 
 .navigation {
   width: 100%;
+  height: $nav-height;
   display: flex;
   justify-content: space-around;
-  border-bottom: 2px solid orangered;
+  background: linear-gradient(to bottom, $color-primary-dark, $color-primary-medium, $color-primary-dark);
+
+  > * {
+    color: $color-text-light;
+    line-height: $nav-height;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
 }
